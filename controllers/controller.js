@@ -12,6 +12,7 @@ const rangeQuery = {
 class Controller {
   static async runCommand() {
     try {
+      View.spinnerStart();
       const range = rangeQuery[this.opts().range];
       if (!range) throw { name: 'InvalidOptions' };
       let students = JSON.parse(await fs.readFile('./keys.json', { encoding: 'utf-8' }));
@@ -38,7 +39,7 @@ class Controller {
           name: students[index].name,
           result: element.data
         };
-      })
+      });
       View.runCommand(result);
     } catch (error) {
       View.displayError(error);

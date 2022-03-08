@@ -10,7 +10,7 @@ program
 program.command('run')
   .description('Get all students stats')
   .option('-n, --name <string>', 'student\'s name')
-  .option('-r, --range <string>', 'yesterday \ntoday \nlast7: Last 7 days \nlast14: Last 14 days')
+  .option('-r, --range <string>', 'yesterday \ntoday \nlast7 \nlast14')
   .action(Controller.runCommand);
 
 program.parse();
