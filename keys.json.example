@@ -2,5 +2,9 @@
   {
     "name": "student's name",
     "key": "student's WakaTime API key"
+  },
+  {
+    "name": "student's name",
+    "key": "student's WakaTime API key"
   }
 ]

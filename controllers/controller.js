@@ -10,6 +10,16 @@ const rangeQuery = {
 };
 
 class Controller {
+  static async listCommand() {
+    try {
+      View.spinnerStart();
+      let students = JSON.parse(await fs.readFile('./keys.json', { encoding: 'utf-8' }));
+      View.listCommand(students);
+    } catch (error) {
+      View.displayError(error);
+    }
+  }
+
   static async runCommand() {
     try {
       View.spinnerStart();

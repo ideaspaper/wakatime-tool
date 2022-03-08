@@ -7,6 +7,10 @@ program
   .description('Tool to monitor students\' coding time')
   .version('0.0.1');
 
+program.command('list')
+  .description('List all available students')
+  .action(Controller.listCommand);
+
 program.command('run')
   .description('Get all students stats')
   .option('-n, --name <string>', 'student\'s name')
